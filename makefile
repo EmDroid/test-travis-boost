@@ -17,7 +17,7 @@ cleanall: clean
 	-rm -f $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CXX) -g -o2 -o $@ $^
+	$(CXX) -g -o2 -o $@ $^ -lboost_thread-mt
 
 .cpp.o:
 	$(CXX) -c -Wall -o2 -I inc -o $@ $<
